@@ -1,0 +1,33 @@
+Skazka/
+│
+├── bot/                      # 👾 Вся логика Telegram-бота
+│   ├── handlers/             #     Обработчики команд
+│   │   ├── tale.py
+│   │   ├── named_tale.py
+│   │   ├── subscription.py
+│   │   ├── coins.py
+│   │   ├── collection.py
+│   │   └── misc.py           #     /help, /voice, fallback и прочее
+│   │
+│   ├── keyboards/            #     Кнопки и клавиатуры
+│   │   └── main_menu.py
+│   │
+│   ├── states.py             #     FSM состояния
+│   └── router.py             #     Регистрация всех хендлеров
+│
+├── core/                     # 🧠 Ядро: генерация, озвучка, AI
+│   ├── ai.py                 #     Генерация сказок через OpenAI
+│   └── tts.py                #     Озвучка через Yandex TTS
+│
+├── db/                       # 🗃 Работа с базой
+│   ├── models.py             #     SQL схемы
+│   └── queries.py            #     CRUD-функции
+│
+├── audio_files/             # 🎵 Генерируемые аудиофайлы
+│
+├── config.py                # ⚙️ Конфиг и env loader
+├── main.py                  # 🚀 Точка запуска (было app.py)
+├── requirements.txt
+├── .gitignore
+└── .env
+
